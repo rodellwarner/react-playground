@@ -5,6 +5,8 @@ import Tooltip from "./composition/Tooltip";
 import Messages from "./Messages";
 import TheDate from "./state/TheDate";
 import Counter from "./state/Counter";
+import Tabs from "./state/Tabs";
+import Accordian from "./state-drills/Accordian";
 
 const firstTooltip = (
   <Tooltip message="tooltip message" color="#000ea0">
@@ -18,10 +20,48 @@ const secondTooltip = (
   </Tooltip>
 );
 
+const tabsProp = [
+  {
+    name: "First tab",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.",
+  },
+  {
+    name: "Second tab",
+    content:
+      "Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    name: "Third tab",
+    content:
+      "Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.",
+  },
+];
+
+const sections = [
+  {
+    title: "Section 1",
+    content: "111 Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    id: "section_1_ID",
+  },
+  {
+    title: "Section 2",
+    content:
+      "222 Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!",
+    id: "section_2_ID",
+  },
+  {
+    title: "Section 3",
+    content:
+      "333 Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?",
+    id: "section_3_ID",
+  },
+];
+
 function App() {
   return (
     <main className="App">
-      <Split className="left" flexBasis={2}>
+      {/* <Split className="left" flexBasis={2}>
         This is the content for the left `Split`. Lorem ipsum {firstTooltip}{" "}
         dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit
         facere officia?
@@ -36,7 +76,9 @@ function App() {
       <Messages name="Messages" unread={0} />
       <Messages name="Notifications" unread={10} />
       <TheDate />
-      <Counter count={123} />
+      <Counter count={123} /> */}
+      {/* <Tabs tabs={tabsProp} /> */}
+      <Accordian sections={sections} />
     </main>
   );
 }
