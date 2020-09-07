@@ -7,6 +7,7 @@ import TheDate from "./state/TheDate";
 import Counter from "./state/Counter";
 import Tabs from "./state/Tabs";
 import Accordian from "./state-drills/Accordian";
+import DemonymApp from "./demonymapp/demonymApp";
 
 const firstTooltip = (
   <Tooltip message="tooltip message" color="#000ea0">
@@ -78,7 +79,8 @@ function App() {
       <TheDate />
       <Counter count={123} /> */}
       {/* <Tabs tabs={tabsProp} /> */}
-      <Accordian sections={sections} />
+      {/* <Accordian sections={sections} /> */}
+      <DemonymApp />
     </main>
   );
 }
